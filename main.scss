@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+$maincolor:bisque;
+$licolor:rgb(150, 150, 150);
+$backcolor:rgb(82, 115, 115);
+
+.logo{
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 25px; 
+    padding-top: 40px;
+    padding-left: 15px;
+}
+nav{
+    background-color: $backcolor;
+
+    div{
+       p{
+           @extend .logo
+       }
+        background-color: bisque;
+        width: 100%;
+        height: 100px;
+        display: flex;
+        justify-content: space-between;
+      
+    }
+      li{
+        display: inline-block;
+         list-style-type: none;
+        padding-right: 45px;
+        padding-top: 45px;
+        color: rgb(164, 152, 152);
+        font-family: sans-serif;
+
+      }
+    @mixin box($color : Blue){
+        background-color: $color;
+        box-shadow: 0 0 1px rgba($theme, .25);
+        color: #fff;
+
+    }
+      .box1{
+        @include theme;
+      }
+        .box2{
+            @include theme;
+            background-color: aqua;
+        }
+        
+
+}
